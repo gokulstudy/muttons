@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Image Showcase</title>
+    <style>
+        /* CSS Variables for easy color management */
+        :root {
+            --bg-color: #f0f8ff; /* AliceBlue */
+            --header-color: #ff4500; /* OrangeRed */
+            --accent-color: #32cd32; /* LimeGreen */
+            --border-color: #4b0082; /* Indigo */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--header-color);
+            text-shadow: 2px 2px #ccc;
+        }
+
+        /* Styling the Image Container */
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            border: 4px solid var(--border-color);
+            border-radius: 15px;
+            padding: 10px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background-color: #fffacd; /* LemonChiffon */
+        }
+
+        /* Applying CSS Filters to Images */
+        .filtered-img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            filter: saturate(1.5) contrast(1.1); /* Boosts colors */
+        }
+
+        /* Special CSS Effect for multi-color feel */
+        .rainbow-text {
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Colorful Page</h1>
+    <p class="rainbow-text">Experience the power of HTML & CSS!</p>
+
+    <div class="image-gallery">
+        <div class="card">
+            <!-- Replace the src with your local image path or a web URL -->
+            <img src="https://placeholder.com" 
+                 alt="Vibrant Green" 
+                 class="filtered-img">
+            <p style="color: var(--accent-color);">Lush Greenery</p>
+        </div>
+
+        <div class="card">
+            <img src="https://placeholder.com" 
+                 alt="Warm Red" 
+                 class="filtered-img">
+            <p style="color: var(--header-color);">Sunset Vibes</p>
+        </div>
+    </div>
+
+</body>
+</html>
